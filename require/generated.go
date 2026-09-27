@@ -70,7 +70,7 @@ func Equal[T any](expected T, msgAndArgs ...any) GenericAssertionFunc[T] {
 	}
 }
 
-// EqualError asserts that a function returned an error (i.e. not `nil`)
+// EqualError asserts that a function returned a non-nil error (i.e. an error)
 // and that it is equal to the provided error.
 func EqualError(errString string, msgAndArgs ...any) GenericAssertionFunc[error] {
 	loc := loc()
@@ -107,7 +107,7 @@ func EqualValues[T any](expected interface{}, msgAndArgs ...any) GenericAssertio
 	}
 }
 
-// Error asserts that a function returned an error (i.e. not `nil`).
+// Error asserts that a function returned a non-nil error (ie. an error).
 func Error(msgAndArgs ...any) GenericAssertionFunc[error] {
 	loc := loc()
 	return func(t TestingT, actual error, called ...any) {
@@ -130,8 +130,8 @@ func ErrorAs(target interface{}, msgAndArgs ...any) GenericAssertionFunc[error] 
 	}
 }
 
-// ErrorContains asserts that a function returned an error (i.e. not `nil`)
-// and that the error contains the specified substring.
+// ErrorContains asserts that a function returned a non-nil error (i.e. an
+// error) and that the error contains the specified substring.
 func ErrorContains(contains string, msgAndArgs ...any) GenericAssertionFunc[error] {
 	loc := loc()
 	return func(t TestingT, actual error, called ...any) {
@@ -489,7 +489,7 @@ func NoDirExists(msgAndArgs ...any) GenericAssertionFunc[string] {
 	}
 }
 
-// NoError asserts that a function returned no error (i.e. `nil`).
+// NoError asserts that a function returned a nil error (ie. no error).
 func NoError(msgAndArgs ...any) GenericAssertionFunc[error] {
 	loc := loc()
 	return func(t TestingT, actual error, called ...any) {
@@ -791,7 +791,7 @@ func WithinRange(start time.Time, end time.Time, msgAndArgs ...any) GenericAsser
 	}
 }
 
-// YAMLEq asserts that two YAML strings are equivalent.
+// YAMLEq asserts that the first documents in the two YAML strings are equivalent.
 func YAMLEq(expected string, msgAndArgs ...any) GenericAssertionFunc[string] {
 	loc := loc()
 	return func(t TestingT, actual string, called ...any) {

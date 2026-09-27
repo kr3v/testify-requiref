@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/kr3v/requiref/requiref"
+	"github.com/kr3v/testify-requiref/requiref"
 )
 
 func TestFacade(t *testing.T) {

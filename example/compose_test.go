@@ -3,7 +3,7 @@ package example_test
 import (
 	"testing"
 
-	requiref "github.com/kr3v/requiref/require"
+	requiref "github.com/kr3v/testify-requiref/require"
 )
 
 type pod struct {

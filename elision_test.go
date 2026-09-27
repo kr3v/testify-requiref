@@ -20,8 +20,8 @@ func TestNoLibraryFramesInErrorTrace(t *testing.T) {
 	}
 
 	out, err := exec.Command("go", "test", "-count=1",
-		"github.com/kr3v/requiref/example",
-		"github.com/kr3v/requiref/example2",
+		"github.com/kr3v/testify-requiref/example",
+		"github.com/kr3v/testify-requiref/example2",
 	).CombinedOutput()
 	if err == nil {
 		t.Fatal("example suites are expected to fail on purpose; they passed")

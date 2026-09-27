@@ -10,7 +10,7 @@
 // types, the binders and the 28 concrete constructors are plain re-exports.
 package requiref
 
-import "github.com/kr3v/requiref/require"
+import "github.com/kr3v/testify-requiref/require"
 
 func init() { require.RegisterWrapper() }
 

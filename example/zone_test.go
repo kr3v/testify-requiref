@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	requiref "github.com/kr3v/requiref/require"
+	requiref "github.com/kr3v/testify-requiref/require"
 )
 
 // mimics compatibility.RequiredZone -- deliberately wrong for two cases.

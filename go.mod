@@ -1,4 +1,4 @@
-module github.com/kr3v/requiref
+module github.com/kr3v/testify-requiref
 
 go 1.27.1
 
